@@ -13,69 +13,114 @@
 
     {{-- Google Font --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
           rel="stylesheet">
 
     {{-- Custom CSS --}}
     <style>
 
-        body{
-            font-family: 'Poppins', sans-serif;
-            background-color: #f4f7fb;
+        :root{
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text: #0f172a;
+            --muted: #64748b;
+            --border: #e2e8f0;
+
+            /* HEADER & FOOTER */
+            --dark: #0f172a;
+            --dark-soft: #1e293b;
         }
 
-        /* Navbar */
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+        }
+
+        /* NAVBAR */
         .navbar{
-            background: linear-gradient(90deg, #0d6efd, #0b5ed7);
-            padding: 15px 0;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            background-color: var(--dark);
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
         .navbar-brand{
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 700;
             color: white !important;
+            letter-spacing: -0.5px;
         }
 
         .nav-link{
-            color: rgba(255,255,255,0.9) !important;
+            color: rgba(255,255,255,0.75) !important;
             font-weight: 500;
-            transition: 0.3s;
+            transition: 0.2s ease;
         }
 
         .nav-link:hover{
-            color: #ffc107 !important;
+            color: white !important;
         }
 
-        /* Main Content */
+        /* BUTTON */
+        .btn-main{
+            background-color: white;
+            color: var(--dark);
+            border-radius: 12px;
+            padding: 10px 18px;
+            font-weight: 600;
+            border: none;
+            transition: 0.2s ease;
+        }
+
+        .btn-main:hover{
+            background-color: #e2e8f0;
+            color: var(--dark);
+        }
+
+        /* MAIN */
         main{
             min-height: 100vh;
         }
 
-        /* Card */
+        /* CARD */
         .card{
-            border: none;
+            background-color: var(--card);
+            border: 1px solid var(--border);
             border-radius: 20px;
-            overflow: hidden;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
         }
 
-        /* Button */
-        .btn{
+        /* INPUT */
+        .form-control,
+        .form-select{
             border-radius: 12px;
-            font-weight: 500;
-            transition: 0.3s;
+            border: 1px solid var(--border);
+            padding: 12px;
         }
 
-        .btn:hover{
-            transform: translateY(-2px);
+        .form-control:focus,
+        .form-select:focus{
+            border-color: var(--dark-soft);
+            box-shadow: none;
         }
 
-        /* Footer */
+        /* FOOTER */
         footer{
-            background: #0d1117;
-            color: #aaa;
-            padding: 20px 0;
-            margin-top: 50px;
+            background-color: var(--dark);
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding: 24px 0;
+            margin-top: 60px;
+        }
+
+        footer p{
+            margin: 0;
+            color: rgba(255,255,255,0.65);
+            font-size: 14px;
         }
 
     </style>
@@ -85,17 +130,17 @@
 <body>
 
     {{-- NAVBAR --}}
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg">
 
         <div class="container">
 
-            {{-- Logo --}}
+            {{-- LOGO --}}
             <a class="navbar-brand" href="/">
-                🎓 SI Fakultas
+                SI Fakultas
             </a>
 
-            {{-- Toggle --}}
-            <button class="navbar-toggler"
+            {{-- TOGGLE --}}
+            <button class="navbar-toggler border-0 shadow-none"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#navbarNav">
@@ -104,7 +149,7 @@
 
             </button>
 
-            {{-- Menu --}}
+            {{-- MENU --}}
             <div class="collapse navbar-collapse" id="navbarNav">
 
                 <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
@@ -120,20 +165,23 @@
                             Fakultas
                         </a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route("prodi.index") }}">
+                        <a class="nav-link" href="{{ route('prodi.index') }}">
                             Prodi
                         </a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route("prodi.create") }}">
-                            + tambah Prodi
+                        <a class="nav-link" href="{{ route('prodi.create') }}">
+                            Tambah Prodi
                         </a>
                     </li>
-                    <li class="nav-item">
+
+                    <li class="nav-item ms-lg-2">
                         <a href="/fakultas/create"
-                           class="btn btn-warning text-white px-4">
-                            + Tambah fakultas
+                           class="btn btn-main">
+                            Tambah Fakultas
                         </a>
                     </li>
 
@@ -152,7 +200,19 @@
     </main>
 
 
-    
+    {{-- FOOTER --}}
+    <footer>
+
+        <div class="container text-center">
+
+            <p>
+                © {{ date('Y') }} Sistem Informasi Fakultas
+            </p>
+
+        </div>
+
+    </footer>
+
 
     {{-- Bootstrap JS --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">

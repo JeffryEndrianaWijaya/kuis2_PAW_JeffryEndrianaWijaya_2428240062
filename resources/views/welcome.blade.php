@@ -1,55 +1,69 @@
 <x-layout>
 
-    {{-- HERO SECTION --}}
-    <section class="bg-primary bg-gradient text-white py-5 overflow-hidden">
+    {{-- HERO --}}
+    <section class="py-5" style="background-color: #f8fafc;">
 
         <div class="container">
 
             <div class="row align-items-center min-vh-75">
 
-                {{-- Text --}}
+                {{-- TEXT --}}
                 <div class="col-lg-6">
 
-                    <span class="badge bg-light text-primary px-3 py-2 rounded-pill mb-3">
-                        🎓 Sistem Informasi Akademik
+                    <span class="small fw-medium px-3 py-2 rounded-pill d-inline-block mb-3"
+                          style="
+                            background-color: #e2e8f0;
+                            color: #475569;
+                          ">
+                        Sistem Informasi Akademik
                     </span>
 
-                    <h1 class="display-3 fw-bold mb-4">
+                    <h1 class="fw-bold display-4 mb-4"
+                        style="color:#0f172a; line-height:1.2;">
                         Kelola Data Fakultas
-                        <span class="text-warning">
-                            Lebih Mudah
-                        </span>
+                        Dengan Lebih Sederhana
                     </h1>
 
-                    <p class="lead text-light mb-4">
+                    <p class="lead mb-4"
+                       style="color:#64748b; max-width:520px;">
                         Platform modern untuk mengelola data fakultas,
-                        dekan, dan informasi akademik universitas secara
-                        cepat, aman, dan profesional.
+                        program studi, dan administrasi akademik
+                        secara efisien.
                     </p>
 
                     <div class="d-flex flex-wrap gap-3">
 
                         <a href="/fakultas"
-                           class="btn btn-light btn-lg rounded-4 px-4 shadow">
-                            📚 Lihat Fakultas
+                           class="btn px-4 py-2 rounded-3"
+                           style="
+                                background-color:#0f172a;
+                                color:white;
+                           ">
+                            Lihat Data
                         </a>
 
                         <a href="/fakultas/create"
-                           class="btn btn-warning btn-lg rounded-4 px-4 shadow text-white">
-                            ➕ Tambah Fakultas
+                           class="btn px-4 py-2 rounded-3 border"
+                           style="
+                                border-color:#cbd5e1;
+                                color:#334155;
+                           ">
+                            Tambah Fakultas
                         </a>
 
                     </div>
 
                 </div>
 
-                {{-- Illustration --}}
+                {{-- IMAGE --}}
                 <div class="col-lg-6 text-center mt-5 mt-lg-0">
 
-                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png"
-                         class="img-fluid"
-                         style="max-height: 420px;"
-                         alt="University">
+                    <img
+                        src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png"
+                        class="img-fluid opacity-75"
+                        style="max-height: 340px;"
+                        alt="Academic"
+                    >
 
                 </div>
 
@@ -61,43 +75,49 @@
 
 
     {{-- FEATURES --}}
-    <section class="py-5 bg-light">
+    <section class="py-5">
 
         <div class="container">
 
             <div class="text-center mb-5">
 
-                <h2 class="fw-bold display-6">
-                    Kenapa Menggunakan Sistem Ini?
+                <h2 class="fw-bold mb-2"
+                    style="color:#0f172a;">
+                    Fitur Utama
                 </h2>
 
-                <p class="text-muted">
-                    Solusi modern untuk manajemen fakultas universitas
+                <p style="color:#64748b;">
+                    Dirancang untuk administrasi akademik modern
                 </p>
 
             </div>
 
             <div class="row g-4">
 
-                {{-- Feature 1 --}}
+                {{-- ITEM --}}
                 <div class="col-md-4">
 
-                    <div class="card border-0 shadow-lg h-100 rounded-4">
+                    <div class="card border-0 rounded-4 h-100"
+                         style="
+                            background-color:#ffffff;
+                            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+                         ">
 
-                        <div class="card-body text-center p-5">
+                        <div class="card-body p-4">
 
-                            <div class="bg-primary text-white rounded-circle d-inline-flex justify-content-center align-items-center mb-4"
-                                 style="width:80px;height:80px;font-size:35px;">
+                            <div class="mb-3"
+                                 style="font-size:28px;">
                                 ⚡
                             </div>
 
-                            <h4 class="fw-bold">
-                                Cepat & Modern
-                            </h4>
+                            <h5 class="fw-semibold mb-2"
+                                style="color:#0f172a;">
+                                Cepat
+                            </h5>
 
-                            <p class="text-muted">
-                                Tampilan profesional dengan performa cepat
-                                untuk pengelolaan data akademik.
+                            <p class="mb-0"
+                               style="color:#64748b;">
+                                Pengelolaan data lebih efisien dan responsif.
                             </p>
 
                         </div>
@@ -106,25 +126,30 @@
 
                 </div>
 
-                {{-- Feature 2 --}}
+                {{-- ITEM --}}
                 <div class="col-md-4">
 
-                    <div class="card border-0 shadow-lg h-100 rounded-4">
+                    <div class="card border-0 rounded-4 h-100"
+                         style="
+                            background-color:#ffffff;
+                            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+                         ">
 
-                        <div class="card-body text-center p-5">
+                        <div class="card-body p-4">
 
-                            <div class="bg-success text-white rounded-circle d-inline-flex justify-content-center align-items-center mb-4"
-                                 style="width:80px;height:80px;font-size:35px;">
+                            <div class="mb-3"
+                                 style="font-size:28px;">
                                 🔒
                             </div>
 
-                            <h4 class="fw-bold">
+                            <h5 class="fw-semibold mb-2"
+                                style="color:#0f172a;">
                                 Aman
-                            </h4>
+                            </h5>
 
-                            <p class="text-muted">
-                                Data tersimpan dengan aman menggunakan
-                                framework Laravel modern.
+                            <p class="mb-0"
+                               style="color:#64748b;">
+                                Sistem dibangun menggunakan Laravel modern.
                             </p>
 
                         </div>
@@ -133,25 +158,30 @@
 
                 </div>
 
-                {{-- Feature 3 --}}
+                {{-- ITEM --}}
                 <div class="col-md-4">
 
-                    <div class="card border-0 shadow-lg h-100 rounded-4">
+                    <div class="card border-0 rounded-4 h-100"
+                         style="
+                            background-color:#ffffff;
+                            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+                         ">
 
-                        <div class="card-body text-center p-5">
+                        <div class="card-body p-4">
 
-                            <div class="bg-warning text-white rounded-circle d-inline-flex justify-content-center align-items-center mb-4"
-                                 style="width:80px;height:80px;font-size:35px;">
+                            <div class="mb-3"
+                                 style="font-size:28px;">
                                 📊
                             </div>
 
-                            <h4 class="fw-bold">
-                                Mudah Digunakan
-                            </h4>
+                            <h5 class="fw-semibold mb-2"
+                                style="color:#0f172a;">
+                                Sederhana
+                            </h5>
 
-                            <p class="text-muted">
-                                Interface sederhana dan intuitif untuk
-                                semua pengguna kampus.
+                            <p class="mb-0"
+                               style="color:#64748b;">
+                                Tampilan minimalis dan mudah digunakan.
                             </p>
 
                         </div>
@@ -168,73 +198,62 @@
 
 
     {{-- STATISTICS --}}
-    <section class="py-5">
+    <section class="py-5"
+             style="background-color:#f8fafc;">
 
         <div class="container">
 
             <div class="row text-center g-4">
 
-                <div class="col-md-3">
+                <div class="col-6 col-md-3">
 
-                    <div class="card border-0 shadow rounded-4 p-4">
+                    <h2 class="fw-bold mb-1"
+                        style="color:#0f172a;">
+                        20+
+                    </h2>
 
-                        <h1 class="fw-bold text-primary">
-                            20+
-                        </h1>
-
-                        <p class="text-muted mb-0">
-                            Fakultas
-                        </p>
-
-                    </div>
+                    <p style="color:#64748b;">
+                        Fakultas
+                    </p>
 
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-6 col-md-3">
 
-                    <div class="card border-0 shadow rounded-4 p-4">
+                    <h2 class="fw-bold mb-1"
+                        style="color:#0f172a;">
+                        100+
+                    </h2>
 
-                        <h1 class="fw-bold text-success">
-                            100+
-                        </h1>
-
-                        <p class="text-muted mb-0">
-                            Staff Akademik
-                        </p>
-
-                    </div>
+                    <p style="color:#64748b;">
+                        Staff
+                    </p>
 
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-6 col-md-3">
 
-                    <div class="card border-0 shadow rounded-4 p-4">
+                    <h2 class="fw-bold mb-1"
+                        style="color:#0f172a;">
+                        5000+
+                    </h2>
 
-                        <h1 class="fw-bold text-warning">
-                            5000+
-                        </h1>
-
-                        <p class="text-muted mb-0">
-                            Mahasiswa
-                        </p>
-
-                    </div>
+                    <p style="color:#64748b;">
+                        Mahasiswa
+                    </p>
 
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-6 col-md-3">
 
-                    <div class="card border-0 shadow rounded-4 p-4">
+                    <h2 class="fw-bold mb-1"
+                        style="color:#0f172a;">
+                        24/7
+                    </h2>
 
-                        <h1 class="fw-bold text-danger">
-                            24/7
-                        </h1>
-
-                        <p class="text-muted mb-0">
-                            Akses Sistem
-                        </p>
-
-                    </div>
+                    <p style="color:#64748b;">
+                        Online
+                    </p>
 
                 </div>
 
@@ -246,22 +265,34 @@
 
 
     {{-- CTA --}}
-    <section class="py-5 bg-dark text-white">
+    <section class="py-5">
 
-        <div class="container text-center">
+        <div class="container">
 
-            <h2 class="fw-bold display-6 mb-4">
-                Mulai Kelola Data Fakultas Sekarang
-            </h2>
+            <div class="text-center rounded-4 p-5"
+                 style="
+                    background-color:#0f172a;
+                    color:white;
+                 ">
 
-            <p class="lead text-light mb-4">
-                Tingkatkan efisiensi administrasi akademik universitas Anda
-            </p>
+                <h2 class="fw-bold mb-3">
+                    Mulai Kelola Data Akademik
+                </h2>
 
-            <a href="/fakultas/create"
-               class="btn btn-warning btn-lg rounded-4 px-5 shadow">
-                🚀 Mulai Sekarang
-            </a>
+                <p class="mb-4 text-light">
+                    Sistem sederhana untuk administrasi kampus modern
+                </p>
+
+                <a href="/fakultas/create"
+                   class="btn px-4 py-2 rounded-3"
+                   style="
+                        background-color:white;
+                        color:#0f172a;
+                   ">
+                    Mulai Sekarang
+                </a>
+
+            </div>
 
         </div>
 
@@ -269,31 +300,30 @@
 
 
     {{-- FOOTER --}}
-    <footer class="bg-black text-light py-4">
+    <footer class="py-4 border-top">
 
         <div class="container">
 
-            <div class="row align-items-center">
+            <div class="d-flex flex-column flex-md-row
+                        justify-content-between align-items-center">
 
-                <div class="col-md-6">
+                <div>
 
-                    <h5 class="fw-bold mb-1">
-                        🎓 Sistem Informasi Fakultas
-                    </h5>
+                    <h6 class="fw-semibold mb-1"
+                        style="color:#0f172a;">
+                        Sistem Informasi Fakultas
+                    </h6>
 
-                    <small class="text-secondary">
-                        Laravel Academic Management System
+                    <small style="color:#64748b;">
+                        Laravel Academic System
                     </small>
 
                 </div>
 
-                <div class="col-md-6 text-md-end mt-3 mt-md-0">
-
-                    <small class="text-secondary">
-                        © {{ date('Y') }} All Rights Reserved
-                    </small>
-
-                </div>
+                <small class="mt-3 mt-md-0"
+                       style="color:#94a3b8;">
+                    © {{ date('Y') }} All Rights Reserved
+                </small>
 
             </div>
 
