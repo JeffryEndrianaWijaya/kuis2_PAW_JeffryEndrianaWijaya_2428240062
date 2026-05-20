@@ -12,6 +12,7 @@ class ProdiController extends Controller
      */
     public function index()
     {
+        // mengambil data
         $prodis = prodi::orderByDesc('created_at')->get();
 
         return view('prodi.list-prodi', [
